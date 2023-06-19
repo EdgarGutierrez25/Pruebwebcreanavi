@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Registro Productos</title>
+
+    <!-- Icons font CSS-->
+    <link href="/css Registro 2/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="/css Registro 2/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="/css Registro 2/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="/css Registro 2/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="/css Registro 2/css/main.css" rel="stylesheet" media="all">
+ <!-- FAV ICON-->
+    <link rel="shortcut icon" href="/images/favicon.png">
+	
+</head>
+
+
+
+
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="/css/table.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!--<title>Dashboard Sidebar Menu</title>--> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <!--<img src="logo.png" alt="">-->
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">OPCIONES</span>
+                    <span class="profession">ADMIN</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="/ventas/nuevaVenta">
+                            
+                            <i class='bx bxs-folder-open icon'></i>
+                            <span class="text nav-text">Contratos</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                      <a href="/ventas/mostrarVenta">
+                          <i class='bx bx-bar-chart-alt-2 icon'></i>
+                          <span class="text nav-text">Mostrar Contratos</span>
+                      </a>
+                  </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                           
+                            <i class='bx bxs-analyse icon'></i>
+                            <span class="text nav-text">Analizis Ventas (Asesores)</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/usuarios/nuevo">
+                            <i class='bx bx-user-circle icon'></i>
+                            <span class="text nav-text">Registrar Usuarios</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/usuarios/mostrarUsu">
+                            <i class='bx bxs-user-detail icon'></i>
+                            <span class="text nav-text">Mostrar Usuarios</span>
+                        </a>
+                    </li>
+ 
+
+                  <li class="nav-link">
+                    <a href="#">
+                      <i class='bx bx-bar-chart-square icon'></i>
+                        <span class="text nav-text">Analisis Ventas</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                  <a href="/productos/mostrarProduc/">
+                      <i class='bx bxl-product-hunt icon'></i>
+                      <span class="text nav-text">Productos</span>
+                  </a>
+              </li>
+
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="/usuarios/logout">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+       
+
+      <div class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
+        <div class="wrapper wrapper--w960">
+            <div class="card card-2">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Datos Cliente</h2>
+
+				<!-- FORMULARIO -->
+				<form action="/ventas/nuevaVenta" method="POST">
+					<input type="hidden" name="status" id="status" value="true">
+                    
+
+                    <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Nombre" name="nombre" id='nombre'/>
+                        <label for="name" class="form__label">Nombre</label>  
+                      </div>
+
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Apellidos" name="apellidos" id='apellidos'/>
+                        <label for="name" class="form__label">Apellidos</label>
+                      </div>
+
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Direccion" name="direccion" id='direccion'/>
+                        <label for="name" class="form__label">Direccion</label>
+                      </div>
+
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Poblacion" name="poblacion" id='poblacion'/>
+                        <label for="name" class="form__label">Poblacion</label>
+                      </div>
+
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Estado" name="estado" id='estado'/>
+                        <label for="name" class="form__label">Estado</label>
+                      </div>
+
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Numero Telefono" name="numero_tel" id='numero_tel'/>
+                        <label for="name" class="form__label">Numero Telefono</label>
+                      </div>
+
+                    <div class="form__group field">
+                      <input id="file" name="image" type="file" accept="image/*" class="form__field" placeholder="Ubicacion" name="ubicacion" id='ubicacion'  onchange="loadFile(event)" style="display: none;"/>
+                      <label for="file" style="cursor: pointer" class="form__label">Imagen Ubicacion</label>
+                    </div>
+
+
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Ubicacion" name="ubicacion" id='ubicacion'/>
+                        <label for="name" class="form__label">Ubicacion</label>
+                      </div>
+                    </div>
+
+
+
+                    <div class="card-body">
+                      <h2 class="title">Producto</h2>
+
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Producto" name="producto" id='producto'/>
+                        <label for="name" class="form__label">Producto</label>
+                      </div>
+                      
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Vendedor" name="vendedor" id='vendedor'/>
+                        <label for="name" class="form__label">Vendedor</label>
+                      </div>
+
+
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Cobrador" name="cobrador" id='cobrador'/>
+                        <label for="name" class="form__label">Cobrador</label>
+                      </div>
+
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Enganche" name="enganche" id='enganche'/>
+                        <label for="name" class="form__label">Enganche</label>
+                      </div>
+
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Plazo" name="plazo" id='plazo'/>
+                        <label for="name" class="form__label">Plazo</label>
+                      </div>
+
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Monto_sem" name="monto_sem" id='monto_sem'/>
+                        <label for="name" class="form__label">Monto semanal</label>
+                      </div>
+
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Abonado" name="abonado" id='abonado'/>
+                        <label for="name" class="form__label">Abonado</label>
+                      </div>
+
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Saldo" name="saldo" id='saldo'/>
+                        <label for="name" class="form__label">Saldo</label>
+                      </div>
+
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Vencido" name="vencido" id='vencido'/>
+                        <label for="name" class="form__label">Vencido</label>
+                      </div>
+
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Saldo inicial" name="saldo_inicial" id='saldo_inicial'/>
+                        <label for="name" class="form__label">Saldo inicial</label>
+                      </div>
+
+                      <div class="form__group field">
+                        <input type="date" class="form__field" placeholder="Fecha" name="fecha" id='fecha'
+                            
+                             min="2018-01-01" max="2023-12-31">
+                        <label for="name" class="form__label">Fecha</label>
+                      </div>
+
+              
+
+
+
+
+                      <button class="pure-button fuller-button blue"type="submit">Guardar</button>
+                      <a class="pure-button fuller-button yellow" href="/ventas/mostrarVenta">Mostrar</a>
+                    </div>
+
+                    <script>
+                    var loadFile = function(event) {
+                      var image = document.getElementById('output');
+                      image.src = URL.createObjectURL(event.target.files[0]);
+                    };
+                    </script>
+
+                       </div>
+                     
+
+                        
+                         
+                     
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="/vendor/select2/select2.min.js"></script>
+    <script src="/vendor/datepicker/moment.min.js"></script>
+    <script src="/vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="/js/global.js"></script>
+
+
+
+    </section>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+</body>
+</html>

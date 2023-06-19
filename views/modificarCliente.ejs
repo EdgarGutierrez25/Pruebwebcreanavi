@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css2/css/style.css" />
+   
+    <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap" rel="stylesheet">
+    <title>Modificar Cliente</title>
+  </head>
+  <body>
+    <div class="content">
+    
+        <div class="container">
+          <h2 class="mb-5">Modificar Usuario o Administrador</h2>
+          
+    
+          <div class="table-responsive">
+                  <form action="/clientes/modificarCli" method="POST">
+                    <table class="table table-striped custom-table">
+                          <div class="card-body">
+                              
+                            <input type="hidden" name="idModificar" id="idModificar"value="<%=cliente[0].id_cli%>">
+                            
+
+                              <div class="form__group field">
+                                <input type="input" class="form__field" placeholder="Nombre" name="nombreModificar" id='nombreModificar'value="<%= cliente[0].nombre%>"/>
+                                <label for="name" class="form__label">Nombre</label>
+                              </div>
+
+                              <div class="form__group field">
+                                <input type="input" class="form__field" placeholder="Apellidos" name="apellidosModificar" id='apellidosModificar'value="<%= cliente[0].apellidos%>"/>
+                                <label for="name" class="form__label">Apellidos</label>
+                              </div>
+
+                              <div class="form__group field">
+                                <input type="input" class="form__field" placeholder="Direccion" name="direccionModificar" id='direccionModificar'value="<%= cliente[0].direccion%>"/>
+                                <label for="name" class="form__label">Direccion</label>
+                              </div>
+
+                              <div class="form__group field">
+                                <input type="input" class="form__field" placeholder="Poblacion" name="poblacionModificar" id='poblacionModificar'value="<%= cliente[0].poblacion%>"/>
+                                <label for="name" class="form__label">Poblacion</label>
+                              </div>
+
+                              <div class="form__group field">
+                                <input type="input" class="form__field" placeholder="Estado" name="estadoModificar" id='estadoModificar'value="<%= cliente[0].estado%>"/>
+                                <label for="name" class="form__label">Estado</label>
+                              </div>
+                              
+
+                              <div class="form__group field">
+                                <input type="input" class="form__field" placeholder="Numero de Telefono" name="numero_telModificar" id='numero_telModificar'value="<%= cliente[0].numero_tel%>"/>
+                                <label for="name" class="form__label">Numero de Telefono</label>
+                              </div>
+
+
+                              <div class="form__group field">
+                                <input type="input" class="form__field" placeholder="Ubicacion" name="ubicacionModificar" id='ubicacionModificar'value="<%= cliente[0].ubicacion%>"/>
+                                <label for="name" class="form__label">Ubicacion</label>
+                              </div>
+
+                            
+
+                          </div>
+       
+                            <div>
+                              <button class="pure-button fuller-button blue"type="submit">Modificar</button>
+                              <a class="pure-button fuller-button red" href="/Clientes/mostrarCliente">Regresar</a>
+                            </div>
+
+
+                             
+
+                          </div>
+                      </div>
+                    </table>
+                  </form>
+              </div>
+              <div class="col-2"></div>
+         
+          
+      </div>
+  </body>
+</html>
+
+
+
+    
+

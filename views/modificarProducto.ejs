@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css2/css/style.css" />
+   
+    <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap" rel="stylesheet">
+    <title>Modificar Producto</title>
+  </head>
+  <body>
+    <div class="content">
+    
+        <div class="container">
+          <h2 class="mb-5">Modificar Producto</h2>
+          
+    
+          <div class="table-responsive">
+                  <form action="/productos/modificarProduc" method="POST">
+                    <table class="table table-striped custom-table">
+                          <div class="card-body">
+                              
+                              <input type="hidden" name="idModificar" id="idModificar"value="<%= producto[0].id_pro%>">
+
+                              <div class="form__group field">
+                                <input type="input" class="form__field" placeholder="Descripcion" name="descripcionModificar" id='descripcionModificar'value="<%=producto[0].descripcion%>"/>
+                                <label for="name" class="form__label">Descripcion</label>
+                              </div>
+
+                              <div class="form__group field">
+                                <input type="input" class="form__field" placeholder="Precio" name="precioModificar" id='precioModificar'value="<%= producto[0].precio%>"/>
+                                <label for="name" class="form__label">Precio</label>
+                              </div>
+
+                              <div class="form__group field">
+                                <input type="input" class="form__field" placeholder="Foto" name="fotoModificar" id='fotoModificar'value="<%= producto[0].foto%>"/>
+                                <label for="name" class="form__label">Foto</label>
+                              </div>
+
+                              <div class="form__group field">
+                                <input type="input" class="form__field" placeholder="Stock" name="stockModificar" id='stockModificar'value="<%= producto[0].stock%>"/>
+                                <label for="name" class="form__label">Sotck</label>
+                              </div>
+                          </div>
+       
+                            <div>
+                              <button class="pure-button fuller-button blue"type="submit">Modificar</button>
+                              <a class="pure-button fuller-button red" href="/Usuarios/accesohome">Regresar</a>
+                            </div>
+
+
+                             
+
+                          </div>
+                      </div>
+                    </table>
+                  </form>
+              </div>
+              <div class="col-2"></div>
+         
+          
+      </div>
+  </body>
+</html>
+
+
+
+    
+

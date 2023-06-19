@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css Table/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="/css Table/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css Table/css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="/css Table/css/style.css">
+
+    <title>Table #6</title>
+  </head>
+  <body>
+  
+    
+
+  <div class="content">
+    
+    <div class="container">
+      <h2 class="mb-5">Administradores y Usuarios</h2>
+      
+      <div>
+        <a class="pure-button fuller-button blue"href="/usuarios/nuevo">Nuevo</a>
+        <a class="pure-button fuller-button red" href="/Usuarios/nuevo">Regresar</a>
+      </div>
+
+      <div class="table-responsive">
+
+
+        <table class="table table-striped custom-table">
+        
+          <thead>
+            <tr>
+              
+              <th scope="col">ID</th>
+              <th scope="col">NOMBRE</th>
+              <th scope="col">USUARIO</th>
+              <th scope="col">PASSWORD</th>
+              <th scope="col">Status</th>  
+              <th scope="col">TIPO</th>
+              <th scope="col">EDITAR / BORAR</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% 
+            usuarios.forEach((usuario)=>{
+        %>
+
+            <tr scope="row">
+
+
+                <td><%= usuario.id_usu%></td>
+                <td><%= usuario.nombre%></td>
+                <td><%= usuario.usuario%></td>
+                <td><%= usuario.password%></td>
+                <td><%= usuario.status%></td>
+                <td><%= usuario.tipo%></td>
+                <td><h3>
+                   
+
+
+                    
+                   <p> <a href="/usuarios/seleccionarId/<%= usuario.id_usu%>">📝 Editar </a></p>
+                   <p> <a href="/usuarios/borradoLogico/<%= usuario.id_usu%>">🗑 Borrado logico</a></p>
+                   <p> <a href="/usuarios/borradoFisico/<%= usuario.id_usu%>">🗑 Borrado Fisico</a>  </p>     
+                                                                                                                            
+                </h3></td>
+            </tr>
+            <%
+        });
+    %>
+    
+          </tbody>
+        </table>
+        </div>
+        </div>
+      </div>
+  </div>
+    
+    
+
+    <script src="/css Table/js/jquery-3.3.1.min.js"></script>
+    <script src="/css Table/js/popper.min.js"></script>
+    <script src="/css Table/js/bootstrap.min.js"></script>
+    <script src="/css Table/js/main.js"></script>
+  </body>
+</html>
+
+
+
+
+  

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css Table/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="/css Table/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css Table/css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="/css Table/css/style.css">
+
+    <title>Tabla PRODUCTOS</title>
+  </head>
+  <body>
+  
+
+
+  <div class="content">
+    
+    <div class="container">
+      <h2 class="mb-5">PRODUCTOS</h2>
+      <div>
+        <a class="pure-button fuller-button blue"href="/productos/nuevoProducto">Nuevo</a>
+        <a class="pure-button fuller-button red" href="/Usuarios/accesohome">Regresar</a>
+      </div>
+
+      <div class="table-responsive">
+
+        <table class="table table-striped custom-table">
+          <thead>
+            <tr>
+              
+              <th scope="col">ID</th>
+              <th scope="col">Descripcion</th>
+              <th scope="col">precio</th>
+              <th scope="col">foto</th>
+              <th scope="col">Stock</th>
+              
+            
+            </tr>
+          </thead>
+          <tbody>
+            <%
+            productos.forEach((producto)=>{
+        %>
+            <tr scope="row">
+
+
+                <td><%= producto.id_pro%></td>
+                <td><%= producto.descripcion%></td>
+                <td><%= producto.precio%></td>
+                <td><img height="150" src="<%=producto.foto%>" alt=""></td>
+                <td><h3>
+               <td><%= producto.stock%></td>
+                            
+                <td><h3>
+                   <rd> <a href="/productos/seleccionarId/<%= producto.id_pro%>">📝 Editar </a></td>
+                   <td> <a href="/productos/borradoLogico/<%= producto.id_pro%>">🗑 Borrado logico</a></td>
+                   <td> <a href="/productos/borradoFisico/<%= producto.id_pro%>">🗑 Borrado Fisico</a>  </td>     
+                                                                                                                            
+                </h3></td>
+            </tr>
+            <%
+        });
+    %>
+    
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+    
+    
+
+    <script src="/css Table/js/jquery-3.3.1.min.js"></script>
+    <script src="/css Table/js/popper.min.js"></script>
+    <script src="/css Table/js/bootstrap.min.js"></script>
+    <script src="/css Table/js/main.js"></script>
+  </body>
+</html>
+
+
+
+
+  

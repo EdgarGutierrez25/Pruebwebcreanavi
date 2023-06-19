@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css2/css/style.css" />
+   
+    <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap" rel="stylesheet">
+    <title>Modificar Usuarios</title>
+  </head>
+  <body>
+    <div class="content">
+    
+        <div class="container">
+          <h2 class="mb-5">Modificar Usuario o Administrador</h2>
+          
+    
+          <div class="table-responsive">
+                  <form action="/usuarios/modificar" method="POST">
+                    <table class="table table-striped custom-table">
+                          <div class="card-body">
+                              
+                              <input type="hidden" name="idModificar" id="idModificar"value="<%= usuario[0].id_usu%>">
+
+                              <div class="form__group field">
+                                <input type="input" class="form__field" placeholder="Name" name="nombreModificar" id='nombreModificar'value="<%=usuario[0].nombre%>"/>
+                                <label for="name" class="form__label">Nombre</label>
+                              </div>
+
+                              <div class="form__group field">
+                                <input type="input" class="form__field" placeholder="Name" name="usuarioModificar" id='usuarioModificar'value="<%= usuario[0].usuario%>"/>
+                                <label for="name" class="form__label">Usuario</label>
+                              </div>
+
+                              <div class="form__group field">
+                                <input type="input" class="form__field" placeholder="Name" name="passwordModificar" id='passwordModificar'value="<%= usuario[0].password%>"/>
+                                <label for="name" class="form__label">Password</label>
+                              </div>
+
+                              <div class="form__group field">
+                                <input type="input" class="form__field" placeholder="Name" name="tipoModificar" id='tipoModificar' value="<%= usuario[0].tipo%>"/>
+                                <label for="name" class="form__label">Tipo</label>
+                              </div>
+
+                          </div>
+       
+                            <div>
+                              <button class="pure-button fuller-button blue"type="submit">Modificar</button>
+                              <a class="pure-button fuller-button red" href="/Usuarios/mostrarUsu">Regresar</a>
+                            </div>
+
+
+                             
+
+                          </div>
+                      </div>
+                    </table>
+                  </form>
+              </div>
+              <div class="col-2"></div>
+         
+          
+      </div>
+  </body>
+</html>
+
+
+
+    
+

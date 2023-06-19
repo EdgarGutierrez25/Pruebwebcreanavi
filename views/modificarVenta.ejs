@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css2/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css2/js/resta.js" />
+   
+    <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap" rel="stylesheet">
+    <title>Modificar Producto</title>
+  </head>
+  <body>
+
+  <!----======== SCRIPTS PARA VENTAS ======== -->
+    <script>
+     function todas(){
+      if(document.getElementById('checkbox-rect1').checked){
+        noabono();
+        vencidocheck();
+      }else{
+       abono();
+       vencidocheck();
+      }
+      vencidocheck();
+     }
+
+  ////////////////ABONO NORMAL //////////////
+      function abono(){
+        
+        var abonadoModificar = Number(document.getElementById('abonadoModificar').value);
+        var saldoModificar = Number(document.getElementById('saldoModificar').value);
+        var vencidoModificar = Number(document.getElementById('vencidoModificar').value);
+        var result = saldoModificar - abonadoModificar;
+        document.getElementById('saldoModificar').value = result;
+        var result1 = vencidoModificar - abonadoModificar;
+        document.getElementById('vencidoModificar').value = result1;
+
+      }
+      ///////////////////////////////////////////////////
+      function nonegativecheck(){
+        var vencidoModificar = Number(document.getElementById('vencidoModificar').value);
+        var saldoModificar = Number(document.getElementById('saldoModificar').value);
+        if(vencidoModificar<0){  
+          document.getElementById('vencidoModificar').value = 0;}
+        if(saldoModificar<0){  
+          document.getElementById('saldoModificar').value = 0;}
+      }
+
+   //////////////////////////SI NO ABONO IR SUMANDO SUS DEUDAS //////////////////////////
+      function noabono(){
+        var monto_semModificar = Number(document.getElementById('monto_semModificar').value);
+        var vencidoModificar = Number(document.getElementById('vencidoModificar').value);
+        var resultNoAbono = monto_semModificar + vencidoModificar;
+        document.getElementById('vencidoModificar').value = resultNoAbono;
+    }
+ 
+
+
+    </script>
+    <div class="content">
+    
+        <div class="container">
+          <h2 class="mb-5">Modificar venta</h2>
+          
+    
+          <div class="table-responsive">
+                  <form action="/ventas/modificarVent" method="POST">
+                    <table class="table table-striped custom-table">
+                          <div class="card-body">
+                              
+                              <input type="hidden" name="idModificar" id="idModificar"value="<%=venta[0].id_vent%>">
+
+                              <div class="form__group field">
+                                <input type="text" class="form__field" placeholder="Plazo" name="plazoModificar" id='plazoModificar'value="<%=venta[0].plazo%>"readonly/>
+                                <label for="name" class="form__label">Plazo de venta</label>
+                              </div>
+
+                              <div class="form__group field">
+                                <input type="input" class="form__field" placeholder="Monto semanal" name="monto_semModificar" id='monto_semModificar'value="<%=venta[0].monto_sem%>"/>
+                                <label for="name" class="form__label">Monto semanal</label>
+                              </div>
+
+
+
+
+
+                              <div class="form__group field">
+                                <input type="number" class="form__field" placeholder="Abonado" name="abonadoModificar" id='abonadoModificar'/>
+                                <label for="name" class="form__label">Ingrese el abono</label>
+                              </div>
+
+                              <div class="form__group field">
+                              
+                              </div>
+
+                              <div class="item">
+                                <div class="checkbox-rect">
+                                  <input type="checkbox" id="checkbox-rect1" name="check">
+                                  <label for="checkbox-rect1">Selecciona si no Abono</label>
+                                  <label for="name" class="form__label">NO ABONO</label>
+                                </div>
+                              </div>
+
+                              <div class="form__group field">
+                                <input type="number" class="form__field" placeholder="Saldo Liquidar" name="saldoModificar" id='saldoModificar'value="<%=venta[0].saldo%>"readonly/>
+                                <label for="name" class="form__label">Saldo Liquidar</label>
+                              </div>
+
+                              <div class="form__group field">
+                                <input type="input" class="form__field" placeholder="Vencido" name="vencidoModificar" id='vencidoModificar'value="<%=venta[0].vencido%>"readonly/>
+                                <label for="name" class="form__label">Vencido</label>
+                              </div>
+
+                              <div class="form__group field">
+                                <input type="input" class="form__field" placeholder="Saldo Inicial" name="saldo_inicialModificar" id='saldo_inicialModificar'value="<%=venta[0].saldo_inicial%>"readonly/>
+                                <label for="name" class="form__label">Saldo Inicial</label>
+                              </div>
+
+                              <div class="form__group field">
+                                <input type="date" class="form__field" placeholder="Fecha" name="fechaModificar" id='fechaModificar'value="<%=venta[0].fecha%>">
+                                <label for="name" class="form__label">Fecha</label>
+                              </div>
+
+                              
+       
+                            <div>
+                              <button type="button" class="pure-button fuller-button yellow" onclick="todas()">Ver cambios</button>
+                              <button class="pure-button fuller-button blue"type="submit">Guardar</button>
+                              <a class="pure-button fuller-button red" href="/ventas/mostrarVenta">Regresar</a>
+                            </div>
+
+
+                             
+
+                          </div>
+                      </div>
+                    </table>
+                  </form>
+              </div>
+              <div class="col-2"></div>
+         
+          
+      </div>
+  </body>
+</html>
+
+
+
+    
